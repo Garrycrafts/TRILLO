@@ -6,16 +6,15 @@
   "license": "ISC",
   "author": "gilfred",
   "type": "commonjs",
- "scripts": {
-  "prebuild": "mkdir -p css",
-  "compile:sass": "sass sass/main.scss css/style.comp.css",
-  "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
-  "compress:css": "postcss css/style.prefix.css -o css/style.css --env production",
-  "build": "npm run prebuild && npm run compile:sass && npm run prefix:css && npm run compress:css",
-  "watch:all": "nodemon -w sass/ -e scss --exec \"npm run build\"",
-  "dev": "concurrently \"npm run watch:all\""
-},
-
+  "scripts": {
+    "prebuild": "mkdir -p css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+    "compress:css": "postcss css/style.prefix.css -o css/style.css --env production --map",
+    "build": "npm run prebuild && npm run compile:sass && npm run prefix:css && npm run compress:css",
+    "watch:all": "nodemon -w sass/ -e scss --exec \"npm run build\"",
+    "dev": "concurrently \"npm run watch:all\""
+  },
   "dependencies": {
     "braces": "^3.0.3",
     "chokidar": "^4.0.3",
@@ -41,5 +40,4 @@
     "postcss-cli": "^11.0.1",
     "sass": "^1.89.2"
   }
-
 }
