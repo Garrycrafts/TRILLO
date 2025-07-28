@@ -15,11 +15,61 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">Header part</header>
+      <header class="header">
+        <img src="img/logo.png" alt="trillo logo" class="logo" />
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/SVG/magnifying-glass.svg"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/SVG/bookmark.svg"></use>
+            </svg>
+
+            <span class="user-nav__notification">7</span>
+          </div>
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/SVG/chat.svg"></use>
+            </svg>
+            <span class="user-nav__notification">13</span>
+          </div>
+          <div class="user-nav__user">
+            <img
+              src="img/user.jpg"
+              alt="photo of user"
+              class="user-nav__user-photo"
+            />
+            <span class="user-nav__user-name">Jonas</span>
+          </div>
+        </nav>
+      </header>
+
       <div class="content">
         <nav class="sidebar">Navigation</nav>
         <main class="hotel-view">Hotel view</main>
       </div>
     </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <ion-icon name="flash-outline"></ion-icon>
   </body>
 </html>
