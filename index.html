@@ -6,8 +6,7 @@
 
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
@@ -22,8 +21,7 @@
           <input
             type="text"
             class="search__input"
-            placeholder="search hotels"
-          />
+            placeholder="search hotels" />
           <button class="search__button">
             <svg class="search__icon">
               <use xlink:href="img/SVG/magnifying-glass.svg"></use>
@@ -49,26 +47,51 @@
             <img
               src="img/user.jpg"
               alt="photo of user"
-              class="user-nav__user-photo"
-            />
+              class="user-nav__user-photo" />
             <span class="user-nav__user-name">Jonas</span>
           </div>
         </nav>
       </header>
 
       <div class="content">
-        <nav class="sidebar">Navigation</nav>
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <use xlink:href="/img/SVG/home.svg"></use>
+                <span>Hotel</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <use xlink:href="/img/SVG/aircraft-take-off.svg"></use>
+                <span>Flight</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <use xlink:href="/img/SVG/key.svg"></use>
+                <span>Car Rental</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <use xlink:href="/img/SVG/map.svg"></use>
+                <span>Tours</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">&copy; 2017 by trillo</div>
+        </nav>
         <main class="hotel-view">Hotel view</main>
       </div>
     </div>
     <script
       type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script
       nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <ion-icon name="flash-outline"></ion-icon>
   </body>
