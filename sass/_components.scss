@@ -120,7 +120,7 @@
 /// SIDE NAVIGATION
 
 .side-nav {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   list-style: none;
   margin-top: 3.5rem;
   &__item {
@@ -135,20 +135,26 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: 3px;
+    width: 2px;
     background-color: var(--color-primary);
     transform: scaleY(0);
     transform-origin: top;
 
     // transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
-    transition: transform 0.2s ease-out,
-      width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s,
+      background-color 0.1s;
   }
 
-  &__item:hover::before {
+  &__item:hover::before,
+  &__item-active::before {
     transform: scaleY(1);
     width: 100%;
   }
+
+  &__item:active::before {
+    background-color: var(--color-primary-light);
+  }
+
   &__link:link,
   &__link:visited {
     z-index: 10;
@@ -159,16 +165,17 @@
     position: relative;
     display: block;
     padding: 1.5rem 3rem;
+    z-index: 10;
     display: flex;
     align-items: center;
   }
 
   &__link:hover {
-    color: orangered;
+    color: currentColor;
   }
   &__icon {
-    width: 1.7rem;
-    height: 1.75rem;
+    width: 2.6rem;
+    height: 2.6rem;
     margin-right: 2rem;
     fill: currentColor;
   }
@@ -181,4 +188,56 @@
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4);
+}
+
+/////////////////
+//// GALLERY
+.gallery {
+  display: flex;
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+}
+
+/////////////////
+//// HOTEL OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-light-2);
+  &__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+  }
+  &__stars {
+    margin-right: auto;
+    display: flex;
+  }
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary);
+  }
+  &__location {
+  }
+  &__rating {
+  }
+  &__rating-average {
+  }
+  &__rating-count {
+  }
+}
+
+/////////////////
+//// BTN-INLINE
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
 }
