@@ -289,6 +289,8 @@
   }
   100% {
     transform: scale(1);
+    box-shadow: inherit;
     box-shadow: none;
   }
 }
+//checking please dont be broken 2
