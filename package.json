@@ -8,8 +8,8 @@
   "type": "commonjs",
   "scripts": {
     "prebuild": "mkdir -p css",
-    "compile:sass": "sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss css/style.comp.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
+    "compile:sass": "sass sass/main.scss css/style.unprefixed.css",
+    "prefix:css": "postcss css/style.unprefixed.css --use autoprefixer -b 'last 10 versions' -o css/style.prefix.css",
     "compress:css": "postcss css/style.prefix.css -o css/style.css --env production --map",
     "build": "npm run prebuild && npm run compile:sass && npm run prefix:css && npm run compress:css",
     "watch:all": "nodemon -w sass/ -e scss --exec \"npm run build\"",
