@@ -1,6 +1,23 @@
-# Ignore output files and folders
-css/
-dist/
+# Node modules (never push this)
 node_modules/
-.vite/
+
+# Build output
+dist/
+css/
 *.css.map
+
+# Sass partials are fine — ignore output
+*.tmp
+*.log
+
+# Vite/Dev server cache
+.vite/
+
+# macOS system files
+.DS_Store
+
+# VS Code settings (optional)
+.vscode/
+
+# npm lockfiles (optional, if using yarn instead)
+# package-lock.json

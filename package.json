@@ -6,14 +6,14 @@
   "license": "ISC",
   "author": "gilfred",
   "type": "module",
-  "scripts": {
-    "dev:css": "rimraf css && mkdir -p css && cross-env BROWSERSLIST='last 10 versions' sass --style=expanded sass/main.scss css/dev.raw.css && postcss css/dev.raw.css -o css/dev.css",
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint:sass": "stylelint 'sass/**/*.scss'",
-    "clean": "rimraf dist"
-  },
+"scripts": {
+  "dev": "vite",                        
+  "build": "vite build",               
+  "build:dev": "vite build --config vite.config.dev.cjs", 
+  "preview": "vite preview",           
+  "lint:sass": "stylelint 'sass/**/*.scss'",
+  "clean": "rimraf dist"
+},
   "dependencies": {
     "braces": "^3.0.3",
     "chokidar": "^4.0.3",
