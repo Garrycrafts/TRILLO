@@ -1,0 +1,16 @@
+# Node
+node_modules/
+package-lock.json
+
+# Build
+dist/
+css/
+*.css.map
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Vite cache
+.vite/
+node_modules
