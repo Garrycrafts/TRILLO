@@ -1,16 +1,6 @@
-# Node
-node_modules/
-package-lock.json
-
-# Build
-dist/
+# Ignore output files and folders
 css/
-*.css.map
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Vite cache
+dist/
+node_modules/
 .vite/
-node_modules
+*.css.map
