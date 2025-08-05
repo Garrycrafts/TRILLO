@@ -7,7 +7,7 @@
   "author": "gilfred",
   "type": "module",
   "scripts": {
-    "dev:css": "sass --style=expanded sass/main.scss css/dev.raw.css && postcss css/dev.raw.css -o css/dev.css",
+    "dev:css": "rimraf css && mkdir -p css && cross-env BROWSERSLIST='last 10 versions' sass --style=expanded sass/main.scss css/dev.raw.css && postcss css/dev.raw.css -o css/dev.css",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
@@ -33,11 +33,13 @@
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "concurrently": "^9.2.0",
+    "cross-env": "^10.0.0",
     "cssnano": "^7.1.0",
     "nodemon": "^3.1.10",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-preset-env": "^10.2.4",
+    "rimraf": "^6.0.1",
     "sass": "^1.89.2",
     "stylelint": "^16.23.0",
     "stylelint-scss": "^6.12.1",
